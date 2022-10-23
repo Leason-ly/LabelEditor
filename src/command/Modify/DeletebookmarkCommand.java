@@ -36,7 +36,8 @@ public class DeletebookmarkCommand extends ModifyCommand {
         }
         folder ans = null;
         for(Element e : folder.getSubordinates()){
-            if(e.getName().equals(name)){
+            if(e.getName().equals(name) 
+               && e.getType().equals("link")){
                 ans = folder;
                 break;
             }
