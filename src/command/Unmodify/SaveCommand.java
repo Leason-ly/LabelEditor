@@ -84,7 +84,7 @@ public class SaveCommand extends UnmodifyCommand {
             System.out.println("save \"" + inputStr + "\" successfully !");
         }catch(IOException e){
             System.out.println("Error saving file content, please try again !");
-            e.printStackTrace();//获取异常
+            //e.printStackTrace();//获取异常
         }
     }
 
