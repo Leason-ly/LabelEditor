@@ -81,7 +81,9 @@ public class SaveCommand extends UnmodifyCommand {
             byte[]  bytes = context.getBytes("UTF-8");//因为中文可能会乱码，这里使用了转码，转成UTF-8；
             outPutStream.write(bytes);//开始写入内容到文件；
             outPutStream.close();//一定要关闭输出流；
+            System.out.println("save \"" + inputStr + "\" successfully !");
         }catch(IOException e){
+            System.out.println("Error saving file content, please try again !");
             e.printStackTrace();//获取异常
         }
     }
